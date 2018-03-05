@@ -4,29 +4,29 @@
 }
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 17px;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  font-size: 17px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+  white-space: normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+  max-width: 280px;
 }
 
 /* Bootstrap overrides */
@@ -35,13 +35,13 @@ textarea {
   border-color: var(--main-bg-color);
 }
 
-.navbar-inverse .navbar-nav > li > a {
-  color: #fff;
-}
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+  }
 
-.navbar-inverse .navbar-brand {
-  color: #fff;
-}
+  .navbar-inverse .navbar-brand {
+    color: #fff;
+  }
 
 .navbar-brand {
   font-weight: bold;
@@ -75,3 +75,50 @@ textarea {
   padding: 7px 20px;
   border-radius: 9px;
 }
+
+/* Page-level styles */
+.gigs {
+  list-style-type: none;
+}
+
+  .gigs > li {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+    .gigs > li .details {
+      position: absolute;
+      top: 0;
+      left: 70px;
+    }
+
+    .gigs > li .details .artist {
+      font-weight: bold;
+      display: block;
+    }
+
+      .gigs > li .details .genre{
+        font-size: 1em;
+      }
+
+    .gigs > li .date {
+      background: red;
+      color: #fff;
+      text-align: center;
+      width: 60px;
+      border-radius: 8px;
+    }
+
+      .gigs > li .date .month {
+        text-transform: uppercase;
+        font-size: .9em;
+        font-weight: bold;
+        padding: 2px 6px;
+      }
+
+      .gigs > li .date .day {
+        background: #f7f7f7;
+        color: #333;
+        font-size: 2em;
+        padding: 6px 12px;
+      }
