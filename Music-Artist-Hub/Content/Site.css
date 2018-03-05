@@ -75,3 +75,8 @@ textarea {
   padding: 7px 20px;
   border-radius: 9px;
 }
+
+.field-validation-error {
+  color: red;
+  font-weight: bold;
+}
