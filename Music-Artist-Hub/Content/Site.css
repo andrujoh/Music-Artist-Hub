@@ -29,6 +29,25 @@ textarea {
   max-width: 280px;
 }
 
+.voffset {
+  margin-top: 2px;
+}
+.voffset1 {
+  margin-top: 5px;
+}
+.voffset2 {
+  margin-top: 10px;
+}
+.voffset3 {
+  margin-top: 20px;
+}
+.voffset4 {
+  margin-top: 40px;
+}
+.voffset5 {
+  margin-top: 80px;
+}
+
 /* Bootstrap overrides */
 .navbar-inverse {
   background: var(--main-bg-color);
@@ -72,7 +91,7 @@ textarea {
 }
 
 .btn {
-  padding: 7px 20px;
+  /*padding: 7px 20px;*/
   border-radius: 9px;
 }
 
