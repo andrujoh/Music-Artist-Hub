@@ -32,18 +32,23 @@ textarea {
 .voffset {
   margin-top: 2px;
 }
+
 .voffset1 {
   margin-top: 5px;
 }
+
 .voffset2 {
   margin-top: 10px;
 }
+
 .voffset3 {
   margin-top: 20px;
 }
+
 .voffset4 {
   margin-top: 40px;
 }
+
 .voffset5 {
   margin-top: 80px;
 }
@@ -86,7 +91,7 @@ textarea {
 
 .form-control {
   font-size: 1em;
-  padding: 20px 15px;
+  height: 44px;
   border-radius: 9px;
 }
 
@@ -111,12 +116,12 @@ textarea {
       left: 70px;
     }
 
-    .gigs > li .details .artist {
-      font-weight: bold;
-      display: block;
-    }
+      .gigs > li .details .artist {
+        font-weight: bold;
+        display: block;
+      }
 
-      .gigs > li .details .genre{
+      .gigs > li .details .genre {
         font-size: 1em;
       }
 
@@ -141,3 +146,12 @@ textarea {
         font-size: 2em;
         padding: 6px 12px;
       }
+
+    .gigs > li .actions {
+      font-size: 1em;
+      display: none;
+    }
+
+    .gigs > li:hover .actions  {
+      display: block;
+    }
