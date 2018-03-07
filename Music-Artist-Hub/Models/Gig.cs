@@ -7,6 +7,8 @@ namespace Music_Artist_Hub.Models
   {
     public int Id { get; set; }
 
+    public bool IsCancelled { get; set; }
+
     public ApplicationUser Artist { get; set; }
 
     [Required]

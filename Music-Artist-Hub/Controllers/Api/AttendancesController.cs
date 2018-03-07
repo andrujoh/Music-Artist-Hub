@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Music_Artist_Hub.Controllers
+namespace Music_Artist_Hub.Controllers.Api
 {
   [Authorize]
   public class AttendancesController : ApiController

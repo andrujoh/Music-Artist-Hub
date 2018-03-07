@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
 
-namespace GigHub.Controllers
+namespace Music_Artist_Hub.Controllers.Api
 {
   [Authorize]
   public class FollowingsController : ApiController
