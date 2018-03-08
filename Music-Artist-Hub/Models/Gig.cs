@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace Music_Artist_Hub.Models
 {
@@ -7,7 +10,7 @@ namespace Music_Artist_Hub.Models
   {
     public int Id { get; set; }
 
-    public bool IsCancelled { get; set; }
+    public bool IsCancelled { get; private set; }
 
     public ApplicationUser Artist { get; set; }
 
@@ -21,5 +24,37 @@ namespace Music_Artist_Hub.Models
 
     [Required]
     public byte GenreId { get; set; }
+    public ICollection<Attendance> Attendances { get; private set; }
+
+    public Gig()
+    {
+      Attendances = new Collection<Attendance>();
+    }
+
+    public void Cancel()
+    {
+      IsCancelled = true;
+
+      var notification = Notification.GigCancelled(this);
+
+      foreach (var attendee in Attendances.Select(a => a.Attendee))
+      {
+        attendee.Notify(notification);
+      }
+    }
+
+    internal void Modify(DateTime dateTime, string venue, byte genre)
+    {
+      var notification = Notification.GigUpdated(this, DateTime, Venue);
+
+      Venue = venue;
+      DateTime = dateTime;
+      GenreId = genre;
+
+      foreach (var attendee in Attendances.Select(a => a.Attendee))
+      {
+        attendee.Notify(notification);
+      }
+    }
   }
 }
